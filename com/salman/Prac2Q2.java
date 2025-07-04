@@ -71,6 +71,11 @@ public static double sqrt(int num)
         Scanner in = new Scanner(System.in);
         System.out.println("Enter Number");
         int num = in.nextInt();
+        if (num<0) 
+        {
+            System.err.println("CANNOT CALCULATE SQRT FOR NEGATIVE NUMBER");
+            System.exit(1);
+        }
         System.out.println(sqrt(num));
         in.close();
     }
