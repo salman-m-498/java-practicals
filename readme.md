@@ -46,11 +46,5 @@ java Prac1Q3
 
 ## ✍️ Author
 
-**Salmaan Moosa**\
-📍 South Africa → Malaysia\
-📧 [your@email.com](mailto\:your@email.com)
-
----
-
-Feel free to fork or star the repo if you're working through similar exercises!
+**Salman Moosa**\
 
