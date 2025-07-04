@@ -3,7 +3,8 @@ package com.salman;
 import java.util.Scanner;
 
 public class Prac1Q3 {
-   public static int sumOtherDigit(int num) {
+   public static int sumOtherDigit(int num) 
+   {
       int sum = 0;
       boolean addDigit = true;
 
@@ -18,7 +19,8 @@ public class Prac1Q3 {
       return sum;
    }
 
-   public static int sumDoubleDigit(int num) {
+   public static int sumDoubleDigit(int num) 
+   {
       int altSum = 0;
 
       for(boolean addDigit = false; num > 0; num /= 10) {
