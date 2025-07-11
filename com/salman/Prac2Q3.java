@@ -15,13 +15,11 @@ public class Prac2Q3
     public static void main(String[] args) 
     {
         System.out.printf("%-6s    %-10s   %-6s    %-10s %n", "Inches", "Centimeters", "Centimeters", "Inches");
-        for(double i = 1; i <= 10; i += 1) 
+        double cm = 5;
+        for(double in = 1; in <= 10; in += 1, cm += 5) 
         {
-            System.out.printf("%-6.1f    %-10s %n", i, inchToCentimeters(i));
-        }
-        for(double i = 5; i <= 50; i += 5) 
-        {
-            System.out.printf("%-6.1f    %-10s %n", i, centimeterToInch(i));
+            System.out.printf("%-6.1f    %-10.2f    %-6.1f         %-10.2f %n", 
+                in, inchToCentimeters(in), cm, centimeterToInch(cm));
         }
     }
 }
