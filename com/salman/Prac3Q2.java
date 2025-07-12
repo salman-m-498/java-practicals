@@ -23,7 +23,4 @@ public class Prac3Q2 {
         System.out.println("The smallest element is at index: " + smallestIndex);
 
     }
-
-
-
 }
