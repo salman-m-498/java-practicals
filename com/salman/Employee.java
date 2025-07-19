@@ -25,8 +25,20 @@ public class Employee
         this.salary = salary;
     }
 
+    // No-argument constructor
+    public Employee() {
+        name = "";
+        salary = 0.0;
+    }
 
-    Employee(String employeeName, double currentSalary) {
+    // Constructor with 1 parameter (name only)
+    public Employee(String employeeName) {
+        name = employeeName;
+        salary = 0.0;
+    }
+
+    // Constructor with 2 parameters (name and salary)
+    public Employee(String employeeName, double currentSalary) {
         name = employeeName;
         salary = currentSalary;
     }
