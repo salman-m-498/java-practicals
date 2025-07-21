@@ -1,51 +1,69 @@
 package com.salman;
 
-public class Student
-{
+public class Student {
+    // Data fields
+    private int studentId;
     private String name;
-    private int age;
-    
-    // Default constructor
+    private int numberOfQuizzes;
+    private int totalQuizScore;
+
+    // No-arg constructor
     public Student() {
+        this.studentId = 0;
         this.name = "";
-        this.age = 0;
+        this.numberOfQuizzes = 0;
+        this.totalQuizScore = 0;
     }
-    
-    // Parameterized constructor
-    public Student(String name, int age) {
+
+    // Constructor with 2 parameters
+    public Student(int studentId, String name) {
+        this.studentId = studentId;
         this.name = name;
-        this.age = age;
+        this.numberOfQuizzes = 0;
+        this.totalQuizScore = 0;
     }
-    
-    // Getter for name
+
+    // Accessors (getters)
+    public int getStudentId() {
+        return studentId;
+    }
+
     public String getName() {
         return name;
     }
-    
-    // Setter for name
+
+    public int getNumberOfQuizzes() {
+        return numberOfQuizzes;
+    }
+
+    public int getTotalQuizScore() {
+        return totalQuizScore;
+    }
+
+    // Mutators (setters)
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
-    
-    // Getter for age
-    public int getAge() {
-        return age;
+
+    // Method to add a quiz score
+    public void addQuiz(int score) {
+        if (score >= 0 && score <= 10) { // Each quiz is worth 10 marks
+            this.totalQuizScore += score;
+            this.numberOfQuizzes++;
+        } else {
+            System.out.println("Invalid score. Each quiz score must be between 0 and 10.");
+        }
     }
-    
-    // Setter for age
-    public void setAge(int age) {
-        this.age = age;
-    }
-    
-    public static void displayDetails(String studentName, int studentAge) 
-    {
-        System.out.println("Name: " + studentName);
-        System.out.println("Age: " + studentAge);
-    }
-    
-    // Instance method to display student details
-    public void displayDetails() {
-        System.out.println("Name: " + this.name);
-        System.out.println("Age: " + this.age);
+
+    // Method to calculate the average score
+    public double getAverageScore() {
+        if (numberOfQuizzes == 0) {
+            return 0.0; // Avoid division by zero
+        }
+        return (double) totalQuizScore / numberOfQuizzes;
     }
 }
