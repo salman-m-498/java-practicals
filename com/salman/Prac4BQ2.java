@@ -1,6 +1,18 @@
 package com.salman;
-public class CarRegistrationTest 
+public class Prac4BQ2 
 {
+    public static void carRegistration() {
+        System.out.println("Car Registration");
+        System.out.println("-----------------");
+
+    }
+
+    public static void printHeader() {
+        System.out.printf("%-6s%-20s%-12s%-12s%-8s%-6s%-10s%-10s%-14s%n",
+            "Reg#", "Name", "IcNumber", "PlateNumber", "Color", "Year", "Brand", "Model", "EngineCapacity");
+        System.out.println("-----------------------------------------------------------------------------------------------");
+    }
+
     public static void main(String[] args) {
         Car[] cars = 
         {
@@ -9,15 +21,12 @@ public class CarRegistrationTest
             new Car(new Owner("Jane Doe",   "444444444"), "C1118", "GREEN", "Toyota", "Vios", 1.5, 2012),
             new Car(new Owner("Ad Johnson", "555555555"), "TV798", "BLUE", "Toyota", "Vios", 1.5, 2012)
         };
-
-        // Print header with alignment
-        System.out.printf("%-6s%-20s%-12s%-12s%-8s%-6s%-10s%-10s%-14s%n",
-            "Reg#", "Name", "IcNumber", "PlateNumber", "Color", "Year", "Brand", "Model", "EngineCapacity");
-        System.out.println("-----------------------------------------------------------------------------------------------");
+        printHeader();
 
         // Print each car with alignment
         int regNo = 1001;
         for (Car car : cars)
+   
         {
             Owner owner = car.getOwner();
             System.out.printf("%-6d%-20s%-12s%-12s%-8s%-6d%-10s%-10s%-14.6f%n",
